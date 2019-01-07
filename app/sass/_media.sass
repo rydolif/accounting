@@ -1,0 +1,184 @@
+
+@media only screen and (max-width : 1200px)
+
+	.reliability__left
+		padding-left: 15px
+
+	h2
+		font-size: 34px
+
+	.feedback
+		&__two p
+			font-size: 12px
+
+		&__three
+			br
+				display: none
+
+	.about__item
+		
+		&:nth-child(1) .about__item_content
+			left: 105%
+			top: -50%
+
+		&:nth-child(2)
+			&::before
+				transform: rotate(-47deg)
+				width: 350px
+				left: 48%
+				top: -54%
+
+			.about__item_content
+				top: -50%
+
+
+		&:nth-child(3)
+			&::before
+				transform: rotate(-38deg)
+				top: -45px
+
+			.about__item_content
+				top: -30%
+
+		&:nth-child(4) .about__item_content
+			top: -30%
+
+
+
+		&_content
+			padding: 15px
+			min-width: 250px
+	
+	.btn--active
+		margin-left: 0
+
+
+@media only screen and (max-width : 992px)
+	h1
+		font-size: 40px
+
+	.header
+		&__place, &__time
+			display: none
+
+		&__container
+			padding-right: 70px
+
+
+	.nav
+		position: fixed
+		display: block
+		width: 320px
+		height: 100%
+		flex-direction: column
+		right: -100%
+		top: 80px
+		z-index: -1
+		background: rgba(0, 0, 0, .9)
+		transition: all .3s
+
+		ul
+			display: flex
+			flex-direction: column
+			justify-content: center
+			margin-top: 40px
+			margin-left: 40px
+
+		li
+			margin: 0
+			margin-bottom: 10px
+
+		a
+			color: #fff
+		
+		&--active
+			right: 0
+
+	.hamburger
+		display: block
+
+	.hero
+		padding-top: 100px
+		padding-bottom: 60px
+
+		p
+			margin-bottom: 30px
+
+	.about
+		padding-top: 40px
+		padding-bottom: 40px
+		&__container
+			height: auto
+
+		&__item:nth-child(1n)
+			position: relative
+			left: auto
+			top: auto
+			bottom: auto
+			right: auto
+			margin-bottom: 30px
+
+			&::before
+				height: 40px
+				width: 15px
+				top: 100%
+				left: auto
+				right: auto
+				bottom: 0
+				transform: rotate(0)
+		
+		&__item_content
+			display: block
+			min-width: 500px
+			left: 100%
+			top: 0
+
+	.about__item:nth-child(1) .about__item_content,
+	.about__item:nth-child(2) .about__item_content,
+	.about__item:nth-child(3) .about__item_content,
+	.about__item:nth-child(4) .about__item_content
+		top: 0
+		left: 105%
+	
+	.about__item_content
+		&::after, &::before
+			top: 50%
+			left: auto
+			right: 99%
+
+		&::before
+			border-bottom: 20px solid transparent
+			border-left: 20px solid transparent
+			border-right: 20px solid $accent
+			border-top: 20px solid transparent
+
+		&::after
+			right: 99%
+			border-bottom: 20px solid transparent
+			border-left: 20px solid transparent
+			border-right: 20px solid #fff
+			border-top: 20px solid transparent
+
+	.about__item:last-child
+		&::before
+			display: none
+
+
+
+@media only screen and (max-width : 767px)
+	.header
+
+@media only screen and (max-width : 576px)
+	.header
+
+@media only screen and (max-width : 480px)
+	.header
+
+
+
+
+
+
+
+
+
