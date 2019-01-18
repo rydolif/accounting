@@ -14,10 +14,10 @@
 </head>
 
 <body>
-<!-- 
+
 	<div class="preloader">
 		<div class="pulse"></div>
-	</div> -->
+	</div>
 
 	<header class="header">
 		<div class="container">
@@ -64,11 +64,21 @@
 				<li><a href="#about">Наши преимущества</a></li>
 				<li><a href="#contacts">Контакты</a></li>
 			</ul>
-			<a href="#" class="btn">Назначить встречу</a>
+
+			<div class="click">
+				<a href="#feedback" class="btn">Назначить встречу</a>
+			</div>
+
+			<p class="nav__tel header__tel">
+				<img src="img/header-tel.png" alt="">
+				<a href="tel:+74955555555">+7 (495) 555-55-55.</a>
+				<br>
+				<a href="tel:+74955555555">+7 (495) 555-55-55.</a>
+			</p>
 		</div>
 	</nav>                                               
 
-	<section class="hero section" id="index">
+	<section class="hero" id="index">
 		<div class="container">
 
 			<img src="img/logo.svg" alt="">
@@ -77,9 +87,9 @@
 
 			<p>Быстрые и правильные решения</p>
 
-			<div class="hero__btn">
-				<a href="#" class="btn">узнать о наших услугах</a>
-				<a href="#" class="btn">Больше о нас</a>
+			<div class="hero__btn click">
+				<a href="#catalog" class="btn">узнать о наших услугах</a>
+				<a href="#about" class="btn">Больше о нас</a>
 			</div>
 
 		</div>
@@ -93,9 +103,10 @@
 				<div class="about__list">
 
 					<div class="about__item">
-						<img src="img/about-icon1.png" alt="">
-						<span>Бухгалтерское <br>сопровождение</span>
-						<div class="bg"></div>
+						<div class="about__item_circle">
+							<img src="img/about-icon1.png" alt="">
+							<span>Бухгалтерское <br>сопровождение</span>
+						</div>
 						<div class="about__item_content">
 							<ul>
 								<li>Постановка бухгалтерского и налогового учета</li>
@@ -107,8 +118,10 @@
 					</div>
 
 					<div class="about__item">
-						<img src="img/about-icon2.png" alt="">
-						<span>Главный <br>бухгалтер</span>
+						<div class="about__item_circle">
+							<img src="img/about-icon2.png" alt="">
+							<span>Главный <br>бухгалтер</span>
+						</div>
 						<div class="about__item_content">
 							<ul>
 								<li>Ведение бухгалтерского учета</li>
@@ -122,8 +135,10 @@
 					</div>
 
 					<div class="about__item">
-						<img src="img/about-icon3.png" alt="">
-						<span>Консультационные <br>услуги</span>
+						<div class="about__item_circle">
+							<img src="img/about-icon3.png" alt="">
+							<span>Консультационные <br>услуги</span>
+						</div>
 						<div class="about__item_content">
 							<ul>
 								<li>Полноценное ведение бухгалтерского и налогового учета</li>
@@ -134,8 +149,10 @@
 					</div>
 
 					<div class="about__item">
-						<img src="img/about-icon4.png" alt="">
-						<span>юридические <br>услуги</span>
+						<div class="about__item_circle">
+							<img src="img/about-icon4.png" alt="">
+							<span>юридические <br>услуги</span>
+						</div>
 						<div class="about__item_content">
 							<ul>
 								<li>Регистрация ЮЛ и ИП</li>
@@ -157,13 +174,13 @@
 				<div class="col-lg-7">
 					<h2>Индивидуальные условия</h2>
 					<p>
-						Мы понимаем, что цели и потребности наших клиентовмогут отличаться, поэтому предлагаем совершенно гибкие и прозрачные условия, как для <b>"Крупного бизнеса"</b>, так и <b>"Малого бизнеса"</b>
+						Мы понимаем, что цели и потребности наших клиентов могут отличаться, поэтому предлагаем совершенно гибкие и прозрачные условия, как для <b>"Крупного бизнеса"</b>, так и <b>"Малого бизнеса"</b>
 					</p>
 				</div>
 
 				<div class="col-lg-4 col-xl-3 offset-xl-1">
-					<a href="#" class="btn">Для крупного бизнеса</a>
-					<a href="#" class="btn">Для малого бизнеса</a>
+					<a href="#" class="btn big_open">Для крупного бизнеса</a>
+					<a href="#" class="btn min_open">Для малого бизнеса</a>
 				</div>
 
 			</div>			
@@ -185,8 +202,8 @@
 						<br>партнеров. 
 						<br>Все сотрудники компании проходят 
 						<br>внутреннюю аттестацию, и что не менее важно,
-						<br> имеют стаж <b>более 10 лет в сфере 
-						<br>бухгалтерских и юридических услуг</b>. Мы 
+						<br> имеют стаж более 10 лет в сфере 
+						<br>бухгалтерских и юридических услуг. Мы 
 						<br>гарантируем не только качество 
 						<br>предоставляемых услуг, но и создаем условия для 
 						<br>максимально комфортного сотрудничества.
@@ -242,20 +259,33 @@
 							</p>
 						</div>
 					</div>
-					<a href="#" class="btn btn--active">Назначить встречу</a>
+					<div class="click">
+					<a href="#feedback" class="btn btn--active">Назначить встречу</a>
+					</div>
 				</div>
 
 			</div>
 		</div>
 	</section>
 
-	<form action="sendmail.php" class="form feedback section" method="post">
+	<form action="sendmail.php" class="form feedback section" id="feedback" method="post">
 		<input type="hidden" name="subject" value="Узнать подробнее!">
 
 		<div class="container">
 			<div class="row">
 
-				<div class="col-md-4 feedback__one">
+				<div class="col-md-4 order-md-11 order-1 feedback__three">
+					<h2>Обратная связь</h2>
+					<p>
+						<b>Заполните форму и наш менджер свяжется с Вами в ближайшее время</b>
+					</p>
+					<span>
+						*10% скидка предоставляется на первый месяц услуг бухгалтерского
+						<br> сопровождения или первый договор на консультационные услуги.
+					</span>
+				</div>
+
+				<div class="col-md-4 order-md-1 order-11 feedback__one ">
 					<p>
 						Поля обязательные для заполнения 
 					</p>
@@ -267,37 +297,27 @@
 					</div>
 				</div>
 
-				<div class="col-md-4 feedback__two">
+				<div class="col-md-4 order-md-1 order-11 feedback__two ">
 					<p>
 						<b>10% скидка</b> при указании дополнительных данных* 
 					</p>
 					<div class="feedback__line">
-						<input type="text" name="text" placeholder="Наименование компании">
+						<input type="text" name="company" placeholder="Наименование компании">
 					</div>
 					<div class="feedback__line">
-						<input type="text" name="text2" placeholder="Должность">
+						<input type="text" name="position" placeholder="Должность">
 					</div>
 					<div class="feedback__line">
 						<button type="submit" class="btn btn--active" name="submit">Отправить</button>
 					</div>
 				</div>
 
-				<div class="col-md-4 feedback__three">
-					<h2>Обратная связь</h2>
-					<p>
-						<b>Заполните форму и наш менджер свяжется с Вами в ближайшее время</b>
-					</p>
-					<span>
-						*10% скидка предоставляется на первый месяц услуг бухгалтерского
-						<br> сопровождения или первый договор на консультационные услуги.
-					</span>
-				</div>
 
 			</div>
 		</div>
 	</form>
 
-	<section class="contacts section" id="contacts">
+	<section class="contacts" id="contacts">
 		<div class="contacts__map" id="map"></div>
 		
 		<div class="container">
@@ -319,8 +339,8 @@
 					<p>Адрес:</p>
 					<p>г. Москва, <br>ул. Ибрагимова, д 31/47</p>
 				</div>
-				<div class="contacts__btn">
-					<a href="#" class="btn">Заказать звонок</a>
+				<div class="contacts__btn click">
+					<a href="#feedback" class="btn">Заказать звонок</a>
 				</div>
 			</div>
 		</div>
@@ -364,37 +384,89 @@
 		</div>
 	</footer>
 
-	<!-- 	modal -->
-		<div class="modal" id="order">
+	<!-- modal -->
+		<div class="modal" id="big">
 			<div class="wrapper">
 				<form action="sendmail.php" class="form" method="post">
 
-					<button class="close order_close" type="button"></button>
+					<button class="close big_close" type="button"></button>
 
-					<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
-					<input type="hidden" name="subject" value="Узнать подробнее!">
-					<div class="form__line"><input type="text" name="name" placeholder="Имя" required></div>
-					<div class="form__line"><input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
-					<div><button type="submit" class="btn form__btn" name="submit" value="отправить">Отправить</button></div>
-					<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
+					<h3>ИНДИВИДУАЛЬНЫЕ УСЛОВИЯ  <br>Для крупного бизнеса</h3>
+					<input type="hidden" name="subject" value="ИНДИВИДУАЛЬНЫЕ УСЛОВИЯ Для крупного бизнеса">
 
+					<p>
+						Поля обязательные для заполнения 
+					</p>
+					<div class="feedback__line">
+						<input type="text" name="name" placeholder="Имя" required>
+					</div>
+					<div class="feedback__line">
+						<input type="tel" name="phone" required placeholder="Телефон">
+					</div>
+
+					<p>
+						<b>10% скидка</b> при указании дополнительных данных* 
+					</p>
+					<div class="feedback__line">
+						<input type="text" name="company" placeholder="Наименование компании">
+					</div>
+					<div class="feedback__line">
+						<input type="text" name="position" placeholder="Должность">
+					</div>
+					<div class="feedback__line">
+						<button type="submit" class="btn" name="submit">Отправить</button>
+					</div>
 				</form>
 			</div>
 		</div>
 
+		<div class="modal" id="min">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form" method="post">
+
+					<button class="close min_close" type="button"></button>
+
+					<h3>ИНДИВИДУАЛЬНЫЕ УСЛОВИЯ  <br>Для малого бизнеса</h3>
+					<input type="hidden" name="subject" value="ИНДИВИДУАЛЬНЫЕ УСЛОВИЯ Для крупного бизнеса">
+
+					<p>
+						Поля обязательные для заполнения 
+					</p>
+					<div class="feedback__line">
+						<input type="text" name="name" placeholder="Имя" required>
+					</div>
+					<div class="feedback__line">
+						<input type="tel" name="phone" required placeholder="Телефон">
+					</div>
+
+					<p>
+						<b>10% скидка</b> при указании дополнительных данных* 
+					</p>
+					<div class="feedback__line">
+						<input type="text" name="company" placeholder="Наименование компании">
+					</div>
+					<div class="feedback__line">
+						<input type="text" name="position" placeholder="Должность">
+					</div>
+					<div class="feedback__line">
+						<button type="submit" class="btn" name="submit">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
 		<div class="modal" id="thanks">
 			<button class="close thanks_close" type="button"></button>
 
 			<h3>Спасибо <br>за доверие!</h3>
 			<p>Мы обязательно с вами свяжемся!</p>
 		</div>
-	<!-- 	modal end-->
+	<!-- modal end-->
 
 	<script src="js/scripts.min.js"></script>
 
 	<script>
       function initMap() {
-        var uluru = {lat: 34.9307386, lng: 33.6249393};
+        var uluru = {lat: 55.7884131, lng: 37.7283414};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 16,
           center: uluru,
@@ -527,7 +599,7 @@
 
 
           var marker = new google.maps.Marker({
-            position: {lat: 34.9307386, lng: 33.6249393},
+            position: uluru,
             map: map,
             icon: 'img/mark.png'
           });
@@ -538,11 +610,11 @@
          //  '<h4 id="firstHeading" class="firstHeading map__title">Alexandrou Panagouli 1, ofce 101, <br>Larnaca 6057, Novel Tower, Cyprus</span></h4>'+
          //  '</div>';
 
-          // var infowindow = new google.maps.InfoWindow({
-          //       content: contentString
-          //     });
+          var infowindow = new google.maps.InfoWindow({
+                // content: contentString
+              });
 
-              infowindow.open(map, marker);
+             // open(map, marker);
 
           }
     </script>

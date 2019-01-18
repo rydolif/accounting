@@ -16,7 +16,7 @@
 		top: -100px
 
 	&--menu
-		top: -100px
+		top: 0
 
 	&__container
 		position: relative
@@ -83,7 +83,11 @@
 	transition: all .6s
 	z-index: 1000
 
-	&--active
+	
+	&__tel
+		display: none
+
+	&--scroll
 		top: 0
 
 	&__container
@@ -186,44 +190,19 @@
 	&__item
 		position: absolute
 		display: flex
-		flex-direction: column
 		justify-content: center
 		align-items: center
-		width: 180px
-		height: 180px
-		box-shadow: 5px 3px 7px rgba(0, 0, 0, 0.35)
-		border-radius: 50%
-		text-align: center
-		color: #fff
-		text-transform: uppercase
-		font-weight: 500
-		z-index: 1
-		background-color: #204e85
-
-		&:hover
-			.about__item_content
-				display: block
-
-		&::after
-			content: ''
-			position: absolute
-			right: 0
-			left: 0
-			top: 0
-			bottom: 0
-			z-index: -1
-			background-color: #204e85
-			border-radius: 50%
-			width: 180px
-			height: 180px
-
-
+		
 		&::before
 			content: ''
 			position: absolute
 			height: 15px
 			background: rgba(#003471, .6)
 			z-index: -2
+
+		&:hover
+			.about__item_content
+				display: block
 
 		&:nth-child(1)
 			bottom: 180px
@@ -239,6 +218,7 @@
 			.about__item_content
 				left: 115%
 				right: auto
+				top: -90px
 
 				&::before, &::after
 					right: 99.2%
@@ -286,15 +266,50 @@
 		img, span
 			z-index: 2
 
+		&_circle
+			position: relative
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			width: 180px
+			height: 180px
+			box-shadow: 5px 3px 7px rgba(0, 0, 0, 0.35)
+			border-radius: 50%
+			text-align: center
+			color: #fff
+			text-transform: uppercase
+			font-weight: 500
+			z-index: 1
+			background-color: #204e85
+
+			&::after
+				content: ''
+				position: absolute
+				right: 0
+				left: 0
+				top: 0
+				bottom: 0
+				z-index: -1
+				background-color: #204e85
+				border-radius: 50%
+				width: 180px
+				height: 180px
+
+
+
+			img
+				width: 35px
+
 		&_content
 			position: absolute
 			right: 115%
-			top: -90%
+			top: -90px
 			border: 1px solid $accent
 			padding: 30px 25px
 			background: #fff
 			border-radius: 15px
-			min-width: 300px
+			width: 300px
 			transition: all .6s
 			display: none
 			z-index: 100
@@ -351,11 +366,36 @@
 
 
 .reliability
+	position: relative
 	background-image: url(../img/reliability-bg.jpg)
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center
 	padding: 60px 0
+	z-index: 1
+
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 48%
+		height: 100%
+		background-color: #083a74
+		opacity: 0.93
+		z-index: -1
+
+	&::after
+		content: ''
+		position: absolute
+		right: 0
+		top: 0
+		background-color: #ececec
+		opacity: 0.75
+		bottom: 0
+		width: 52%
+		height: 100%
+		z-index: -1
 
 	h2
 		margin-top: 25px

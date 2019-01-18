@@ -37,6 +37,8 @@ $(function() {
         var t = {
           name: jQuery('.form-' + index).find("input[name=name]").val(),
           phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          company: jQuery('.form-' + index).find("input[name=company]").val(),
+          position: jQuery('.form-' + index).find("input[name=position]").val(),
           subject: jQuery('.form-' + index).find("input[name=subject]").val()
         };
         ajaxSend('.form-' + index, t);
@@ -64,11 +66,11 @@ $(function() {
   $(window).scroll(function(){
       if($(this).scrollTop()>20){
           $('.header').addClass('header--active');
-          $('.nav').addClass('nav--active');
+          $('.nav').addClass('nav--scroll');
       }
       else if ($(this).scrollTop()<20){
           $('.header').removeClass('header--active');
-          $('.nav').removeClass('nav--active');
+          $('.nav').removeClass('nav--scroll');
       }
   });
 
@@ -78,11 +80,7 @@ $(function() {
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
       $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
-  //--------------------закриття меню при кліку на ссилку якоря--------------------
-     // $('.hamburger').removeClass('hamburger--active');
-     // $('.header-menu').removeClass('header-menu');
-     // $('.header--active').removeClass('header--active');
-     // $('.nav--active').removeClass('nav--active');
+
 
   });
   
@@ -90,7 +88,7 @@ $(function() {
 
 //----------------------------------------preloader----------------------------------
 
-  // $(window).on('load', function(){
-  //   $('.preloader').delay(1000).fadeOut('slow');
-  // });
+  $(window).on('load', function(){
+    $('.preloader').delay(1000).fadeOut('slow');
+  });
 

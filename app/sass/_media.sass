@@ -1,6 +1,6 @@
 
 @media only screen and (max-width : 1200px)
-
+	
 	.reliability__left
 		padding-left: 15px
 
@@ -47,7 +47,6 @@
 
 		&_content
 			padding: 15px
-			min-width: 250px
 	
 	.btn--active
 		margin-left: 0
@@ -57,7 +56,22 @@
 	h1
 		font-size: 40px
 
+	h2
+		margin-bottom: 30px !important
+
+	.btn--active
+		padding: 0 60px
+
 	.header
+		padding: 10px 0
+
+		&--active
+			top: 0
+			background: $accent
+
+		&--menu
+			background: $accent
+
 		&__place, &__time
 			display: none
 
@@ -71,18 +85,21 @@
 		width: 320px
 		height: 100%
 		flex-direction: column
-		right: -100%
-		top: 80px
-		z-index: -1
-		background: rgba(0, 0, 0, .9)
+		right: -320px
+		left: auto
+		top: 55px
+		z-index: 1000
+		background: rgba($accent, 1)
 		transition: all .3s
+		opacity: 1
 
 		ul
 			display: flex
 			flex-direction: column
 			justify-content: center
 			margin-top: 40px
-			margin-left: 40px
+			list-style-type: none
+			margin-bottom: 40px
 
 		li
 			margin: 0
@@ -93,6 +110,10 @@
 		
 		&--active
 			right: 0
+
+		&__container
+			flex-direction: column
+			align-items: flex-start
 
 	.hamburger
 		display: block
@@ -107,38 +128,34 @@
 	.about
 		padding-top: 40px
 		padding-bottom: 40px
+
 		&__container
 			height: auto
 
-		&__item:nth-child(1n)
-			position: relative
-			left: auto
-			top: auto
-			bottom: auto
-			right: auto
-			margin-bottom: 30px
+		&__item
+			display: flex
+			justify-content: space-between
+			&:nth-child(1n)
+				position: relative
+				left: auto
+				top: auto
+				bottom: auto
+				right: auto
+				margin-bottom: 30px
 
 			&::before
-				height: 40px
-				width: 15px
-				top: 100%
-				left: auto
-				right: auto
-				bottom: 0
-				transform: rotate(0)
-		
-		&__item_content
-			display: block
-			min-width: 500px
-			left: 100%
-			top: 0
+				display: none
 
-	.about__item:nth-child(1) .about__item_content,
-	.about__item:nth-child(2) .about__item_content,
-	.about__item:nth-child(3) .about__item_content,
-	.about__item:nth-child(4) .about__item_content
+			&:last-child
+				margin-bottom: 0
+		
+			&_content
+				display: block
+
+	.about__item:nth-child(1n) .about__item_content
 		top: 0
-		left: 105%
+		left: 180px
+		width: 500px
 	
 	.about__item_content
 		&::after, &::before
@@ -162,22 +179,243 @@
 	.about__item:last-child
 		&::before
 			display: none
+	
+	.reliability
 
+		br
+			display: none
+
+		&::before
+			width: 100%
+			height: 42%
+
+		&::after
+			height: 58%
+			width: 100%
+			bottom: 0
+			top: auto
+
+		&__right_item
+			margin-bottom: 30px
+
+
+		&__left
+			margin-bottom: 60px
+
+	.footer__nav ul
+		columns: 1
+
+	.footer__item:last-child
+		margin-right: 0
+
+	.form .feedback__line:last-child
+		margin-bottom: 20px
+
+	.feedback__two p
+		margin-bottom: 5px
+
+	.feedback__one p
+		margin-bottom: 5px
+
+	.feedback__three 
+		p,
+		span
+			margin-bottom: 15px
 
 
 @media only screen and (max-width : 767px)
-	.header
+	
+	h1
+		font-size: 26px
+
+	h2
+		font-size: 22px
+
+	.about__item:nth-child(1n) .about__item_content
+		width: 320px
+		top: -30px
+
+	.about__item_content li
+		margin-bottom: 3px
+
+	.section
+		padding: 40px 0
+
+	.footer
+		padding-bottom: 20px
+
+		p
+			margin-bottom: 15px
+
+		&__container
+			flex-direction: column
+			align-items: center
+			text-align: center
+
+		&__item, &__nav
+			margin-bottom: 25px
+
+		.header__logo
+			margin-bottom: 15px
+
+		&__nav
+			li
+				margin-bottom: 5px
+
+	.contacts
+		background: rgba(8,58,115,1)
+
+		&__map
+			height: 400px
+
+		&__block
+			max-width: 100%
+			padding-bottom: 20px
+
+		.container
+			position: relative
+
 
 @media only screen and (max-width : 576px)
+	.about
+		&__item
+			flex-direction: column
+			&_circle
+				width: 140px
+				height: 140px
+				font-size: 12px
+				margin-bottom: 10px
+
+				&::after
+					width: 140px
+					height: 140px
+
+				&::before
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 50%
+					transform: translate(-50%, -50%)
+					width: 15px
+					height: 30px
+					bottom: -30px
+					background: rgba(#003471, .6)
+					z-index: -1
+
+			&:nth-child(1n)
+				margin-bottom: 25px
+		
+				.about__item_content
+					width: 100%
+					min-width: 100%
+					left: 0
+					top: 0
+
+			&_content
+				position: relative
+
+				&::before,
+				&::after
+					display: none
+
+
+			&:last-child
+				margin-bottom: 0
+
+
+	
 	.header
+		&__logo
+			font-size: 10px
+			img
+				margin-right: 10px
+
+		&__tel
+			padding-left: 27px
+
+	.hero
+
+		.btn:first-child
+			margin-right: 25px
+
+
+	.nav
+		top: 58px
+
 
 @media only screen and (max-width : 480px)
-	.header
 
 
 
+	.about__item:nth-child(1n) .about__item_content
+		width: 290px
+
+	.hero__btn
+		flex-wrap: wrap
+
+		.btn
+			width: 100%
+			margin-bottom: 10px
+
+			&:first-child
+				margin-right: 0
+
+	
+	.header__tel
+		display: none
+
+	.nav
+		top: 50px
+
+		&__tel
+			display: block
+
+		.btn
+			margin-bottom: 25px
 
 
+	h1
+		font-size: 20px
+
+	.hero p
+		font-size: 15px
+
+	.conditions .btn
+		margin-top: 15px
+
+	.conditions p
+		font-size: 14px
+
+	.section
+		padding: 30px 0
+
+	.reliability
+		&::before
+			height: 40%
+
+		&::after
+			height: 60%
+
+		img
+			margin: 0 auto 15px
+
+		&__left p
+			font-size: 14px
+	
+	.feedback__three, .conditions, .reliability
+		text-align: center
+
+
+	.contacts__block
+		padding-left: 0
+
+@media only screen and (max-width : 370px)
+	.reliability
+		&::before
+			height: 32%
+
+		&::after
+			height: 68%
 
 
 
